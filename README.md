@@ -1,4 +1,4 @@
-# hoomega
+# hoomega-beta
 
 ## Project setup
 ```
