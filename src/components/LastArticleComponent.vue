@@ -1,14 +1,12 @@
 <template>
-  <div class="hello">
-    <h1>Hello, Lisa</h1>
-  </div>
+  <h1>{{msg}}</h1>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class HelloWorld extends Vue {
+export default class LastArticleComponent extends Vue {
   @Prop() private msg!: string;
 }
 </script>
