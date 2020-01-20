@@ -1,22 +1,23 @@
 <template>
     <div>
-        <vs-navbar collaspe v-model="activeItem" class="navbarx" type="border">
+        <vs-navbar v-model="activeItem" class="navbarx" type="flat">
             <div slot="title">
-                <vs-button @click="toggleSidebar(true)"
+                <vs-button id="navbarx-button" @click="toggleSidebar(true)"
                     color="dark" type="flat" radius icon="menu" />
-                <vs-spacer></vs-spacer>
                 <vs-navbar-title class="navbarx-title">
-                    <h2>HOOMEGA LOGO</h2>
+                    <h2>HOOMEGA</h2>
                 </vs-navbar-title>
             </div>
             <vs-navbar-item class="navbarx-item" index="0">
                 <a href="#">SEARCH</a>
                 <span class="vs-navbar-after"></span>
             </vs-navbar-item>
+            ·
             <vs-navbar-item class="navbarx-item" index="1">
                 <a href="#">CATEGORIES</a>
                 <span class="vs-navbar-after"></span>
             </vs-navbar-item>
+            ·
             <vs-navbar-item class="navbarx-item" index="2">
                 <a href="#">ARCHIVES</a>
                 <span class="vs-navbar-after"></span>
@@ -52,7 +53,7 @@ export default class TopBarComponent extends Vue {
         padding: 0 50px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Cantarell, 'Open Sans';
         font-weight: 400;
-
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         .navbarx-title {
             display: flex;
             justify-content: space-between;
@@ -61,6 +62,12 @@ export default class TopBarComponent extends Vue {
         .blank-space {
             height: 100px;
         }
+    }
+}
+
+@media screen and (max-width: 799px) {
+    #navbarx-button {
+        display: none;
     }
 }
 </style>
