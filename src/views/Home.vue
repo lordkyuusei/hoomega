@@ -1,17 +1,22 @@
+<!-- @format -->
+
 <template>
   <div class="home">
-    <HelloWorld msg="Hello, Lisa"/>
+    <HomeSplash msg="Hello, Lisa" />
+    <ArticlesList msg="Hello, Lisa" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/LastArticleComponent.vue';
+import HomeSplash from '@/components/HomeSplash.vue';
+import ArticlesList from '@/components/ArticlesList.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
+    HomeSplash,
+    ArticlesList,
   },
 };
 </script>
